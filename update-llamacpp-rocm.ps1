@@ -22,11 +22,12 @@ $ExtractDir = Join-Path $DownloadDir "llamacpp-rocm"
 
 # Create or clean extraction directory
 if (Test-Path $ExtractDir) {
-    Write-Host "Cleaning old files in $ExtractDir ..."
-    Remove-Item -Recurse -Force -Path $ExtractDir\*
-} else {
-    New-Item -ItemType Directory -Path $ExtractDir | Out-Null
+    $timestamp = Get-Date -Format "yyyyMMdd-HHmm"
+    $BackupDir = "$ExtractDir-$timestamp"
+    Write-Host "Renaming existing $ExtractDir to $BackupDir ..."
+    Rename-Item -Path $ExtractDir -NewName $BackupDir
 }
+New-Item -ItemType Directory -Path $ExtractDir | Out-Null
 
 # GitHub API URL
 $ApiUrl = "https://api.github.com/repos/$Owner/$Repo/releases/latest"
