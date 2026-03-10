@@ -1,6 +1,6 @@
 # update-llamacpp-rocm
 
-This repository contains a PowerShell script (`update-llamacpp-rocm.ps1`) that automates downloading and installing the latest Windows ROCm‑enabled binaries of **llama.cpp** from GitHub.
+This repository contains a PowerShell script (`update-llamacpp-rocm.ps1`) that automates downloading and installing the latest Windows binaries of **llama.cpp** from GitHub.
 
 ## Features
 
