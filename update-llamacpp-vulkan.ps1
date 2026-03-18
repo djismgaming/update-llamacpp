@@ -60,15 +60,15 @@ Expand-Archive -Path $ZipFile -DestinationPath $ExtractDir -Force
 Write-Host "Extraction complete."
 
 # Add to PATH if not already there
-$CurrentPath = [Environment]::GetEnvironmentVariable("Path", "User")
-if ($CurrentPath -notlike "*$ExtractDir*") {
-    Write-Host "Adding $ExtractDir to user PATH ..."
-    $NewPath = "$CurrentPath;$ExtractDir"
-    [Environment]::SetEnvironmentVariable("Path", $NewPath, "User")
-    Write-Host "PATH updated. You may need to open a new terminal for changes to take effect."
-} else {
-    Write-Host "$ExtractDir is already in PATH."
-}
+# $CurrentPath = [Environment]::GetEnvironmentVariable("Path", "User")
+# if ($CurrentPath -notlike "*$ExtractDir*") {
+#     Write-Host "Adding $ExtractDir to user PATH ..."
+#     $NewPath = "$CurrentPath;$ExtractDir"
+#     [Environment]::SetEnvironmentVariable("Path", $NewPath, "User")
+#     Write-Host "PATH updated. You may need to open a new terminal for changes to take effect."
+# } else {
+#     Write-Host "$ExtractDir is already in PATH."
+# }
 
 # (Optional) Remove the zip to save space
 Remove-Item $ZipFile -Force
