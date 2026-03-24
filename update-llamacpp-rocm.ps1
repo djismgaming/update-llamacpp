@@ -5,9 +5,9 @@
 Write-Host "🚀  Updating Llama.cpp compiled for the ROCm backend" -ForegroundColor Cyan
 
 # Define repo and asset pattern
-$Owner = "ggml-org"
-$Repo = "llama.cpp"
-$AssetPattern = "bin-win-hip-radeon-x64.zip"
+$Owner = "lemonade-sdk"
+$Repo = "llamacpp-rocm"
+$AssetPattern = "windows-rocm-gfx103X-x64.zip"
 
 # Base download directory
 $DownloadDir = Join-Path $env:USERPROFILE "apps"
