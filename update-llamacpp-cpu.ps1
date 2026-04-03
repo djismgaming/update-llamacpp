@@ -1,5 +1,5 @@
 ###########################
-#     Llama.cpp Vulkan    #
+#     Llama.cpp CPU    #
 ###########################
 
 Write-Host "🚀  Updating Llama.cpp compiled for the Vulkan backend" -ForegroundColor Cyan
