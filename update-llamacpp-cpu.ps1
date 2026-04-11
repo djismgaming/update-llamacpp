@@ -2,12 +2,12 @@
 #     Llama.cpp CPU    #
 ###########################
 
-Write-Host "🚀  Updating Llama.cpp compiled for the Vulkan backend" -ForegroundColor Cyan
+Write-Host "🚀  Updating Llama.cpp compiled for the CPU backend" -ForegroundColor Cyan
 
 # Define repo and asset pattern
 $Owner = "ggml-org"
 $Repo = "llama.cpp"
-$AssetPattern = "bin-win-cpu-x64.zip"
+$AssetPattern = "*-win-cpu-x64.zip"
 
 # Base download directory
 $DownloadDir = Join-Path $env:USERPROFILE "apps"
@@ -75,6 +75,6 @@ Remove-Item $ZipFile -Force
 
 # Verify installation (assuming the binary is named 'llama-server.exe')
 Write-Host "Verifying installation..."
-& "$HOME\apps\llamacpp-vulkan\llama-server.exe" --version
+& "$ExtractDir\llama-server.exe" --version
 
-Write-Host "✔️  Updating Llama.cpp compiled for the Vulkan backend complete" -ForegroundColor Cyan
+Write-Host "✔️  Updating Llama.cpp compiled for the CPU backend complete" -ForegroundColor Cyan
